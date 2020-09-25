@@ -24,9 +24,9 @@ public class Board {
 
 	static {
 		ships = new Ship[] { 
-//					new Ship("Carrier",ShipSize.CARRIER), 
-//					new Ship("Battleship", ShipSize.BATTLESHIP),
-//					new Ship("Destroyer", ShipSize.DESTROYER), 
+					new Ship("Carrier",ShipSize.CARRIER), 
+					new Ship("Battleship", ShipSize.BATTLESHIP),
+					new Ship("Destroyer", ShipSize.DESTROYER), 
 					new Ship("Submarine", ShipSize.SUBMARINE),
 					new Ship("Patrol Boat", ShipSize.PATROLBOAT) 
 					};
@@ -99,10 +99,16 @@ public class Board {
 						}
 					}
 					 if(!isPrint) {
-						System.out.print('X' + "\t");
+						System.out.print('~' + "\t");
 					}
 				}else {
-					System.out.print(c + "\t");
+					if(c=='X') {
+						c='~';
+						System.out.print(c + "\t");
+					}else {
+						System.out.print(c + "\t");
+					}
+					
 				}
 			}
 			System.out.println();

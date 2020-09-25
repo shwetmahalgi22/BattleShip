@@ -10,7 +10,7 @@ import in.battleship.drawnboard.BoardIndex;
 import in.battleship.game.Result;
 
 public class PlayerBoard {
-	private int totalLivesLeft = 5;
+	private int totalLivesLeft = 17;
 
 	private Board board;
 	private Scanner scanner;
@@ -53,7 +53,7 @@ public class PlayerBoard {
 					
 					
 				}else {
-					System.out.println("Sorry, duplicate found.");
+					System.out.println("Oh! You have attacked on these coordinates again. This will be counted in your attempts.");
 					((GameBoard) opponent).getBoard().printResults(x,y, indexes);
 				}
 				isPointValid = true;	
